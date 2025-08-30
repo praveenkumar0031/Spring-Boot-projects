@@ -3,6 +3,7 @@ const API_BASE_URL = 'http://localhost:8080/api/todo'; // Update with your backe
 class TodoAPI {
   async getAllTodos() {
     const response = await fetch(`${API_BASE_URL}/get/all`);
+    console.log(response);
     if (!response.ok) throw new Error('Failed to fetch todos');
     return response.json();
   }
@@ -59,5 +60,6 @@ class TodoAPI {
     return response.text();
   }
 }
+const todoApiInstance = new TodoAPI();
 
 export default new TodoAPI();
