@@ -59,7 +59,7 @@ const TodoItem = ({ todo, onUpdate, onDelete }) => {
           onChange={handleToggleDone}
           className="todo-checkbox"
         />
-        
+
         <div className="todo-details">
           {isEditing ? (
             <div className="todo-edit-form">
@@ -92,7 +92,7 @@ const TodoItem = ({ todo, onUpdate, onDelete }) => {
           )}
         </div>
       </div>
-      
+
       <div className="todo-actions">
         {isEditing ? (
           <>
@@ -105,15 +105,15 @@ const TodoItem = ({ todo, onUpdate, onDelete }) => {
           </>
         ) : (
           <>
-            <button 
-              onClick={() => setIsEditing(true)} 
+            <button
+              onClick={() => setIsEditing(true)}
               className="edit-btn"
               title="Edit"
             >
               ✏️
             </button>
-            <button 
-              onClick={() => onDelete(todo.id)} 
+            <button
+              onClick={() => onDelete(todo.id)}
               className="delete-btn"
               title="Delete"
             >

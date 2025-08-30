@@ -161,18 +161,18 @@ const App = () => {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Todo List Manager</h1>
+        <h1 className="doboard"><b>Do Board</b></h1>
         <div className="todo-stats">
           <div className="stat-item">
             <span className="stat-number">{totalElements}</span>
             <span className="stat-label">Total</span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">{stats.pending}</span>
+            <span className="stat-number pending">{stats.pending}</span>
             <span className="stat-label">Pending</span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">{stats.completed}</span>
+            <span className="stat-number completed">{stats.completed}</span>
             <span className="stat-label">Completed</span>
           </div>
         </div>

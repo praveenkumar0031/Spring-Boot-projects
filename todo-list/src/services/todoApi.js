@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api/todo'; // Update with your backend URL
+const API_BASE_URL = process.env.REACT_APP_Backend_APi; 
 
 class TodoAPI {
   async getAllTodos() {
@@ -60,6 +60,6 @@ class TodoAPI {
     return response.text();
   }
 }
-const todoApiInstance = new TodoAPI();
+//const todoApiInstance = new TodoAPI();
 
 export default new TodoAPI();
