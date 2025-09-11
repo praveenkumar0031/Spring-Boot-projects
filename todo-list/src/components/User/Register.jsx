@@ -1,6 +1,6 @@
 // src/components/Register.js
 import React, { useState } from "react";
-import { registerUser } from "../../services/AuthService";
+import AuthService from "../../services/AuthService";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -11,7 +11,7 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await registerUser(email, password, favourite);
+      await AuthService.registerUser(email, password, favourite);
       setMessage("User registered successfully!");
     } catch (error) {
       setMessage(error.response?.data || "Registration failed!");
