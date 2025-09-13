@@ -1,0 +1,84 @@
+.forget-password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: #f9fafb;
+  padding: 20px;
+}
+
+.forget-password-card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 380px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.forget-password-card:hover {
+  transform: translateY(-3px);
+}
+
+.forget-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.forget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.forget-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.forget-input:focus {
+  border-color: #4f46e5; /* Indigo shade */
+}
+
+.forget-btn {
+  background: #f59e0b; /* Amber yellow */
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.forget-btn:hover {
+  background: #d97706;
+}
+
+.forget-message {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forget-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.forget-link {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forget-link:hover {
+  text-decoration: underline;
+}

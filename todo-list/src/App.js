@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Login from "./components/User/Login";
 import TodoBoard from "./components/todoBoard/TodoBoard";
 import Register from "./components/User/Register";
+import ForgetPassword from "./components/User/Forget";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -10,9 +11,24 @@ const PrivateRoute = ({ children }) => {
 
 function App() {
   return (
-    <div>
-      <Register/>
-    </div>
+    
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/todos"
+          element={
+            <PrivateRoute>
+              <TodoBoard />
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="/forget-password" element={<ForgetPassword/>} />
+      </Routes>
+    </Router>
+
   );
 }
 export default App;
