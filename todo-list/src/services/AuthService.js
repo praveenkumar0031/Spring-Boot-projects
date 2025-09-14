@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/auth"; // adjust your backend URL
+const API_URL =process.env.REACT_APP_Auth_APi; // adjust your backend URL
 
 // 🔹 Login
 const loginUser = async (email,pass) => {

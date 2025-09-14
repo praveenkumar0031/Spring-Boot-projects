@@ -5,7 +5,7 @@ import Pagination from '../pagination/Pagination';
 import TodoFilter from '../todofilter/TodoFilter';
 import TodoAPI from '../../services/todoApi';
 import './board.css';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 
 const TodoBoard = () => {
@@ -159,14 +159,20 @@ const TodoBoard = () => {
     const pending = todos.length - completed;
     return { total: todos.length, completed, pending };
   }, [todos]);
+const navigate = useNavigate();
 
+  const handleLogout = (e) => {
+    e.preventDefault(); 
+    localStorage.removeItem("token");
+    navigate("/login", { replace: true });
+  };
 
   return (
     <div className="app">
       <header className="app-header">
         
         <h1>Todo List Manager</h1>
-        <Link to="/login" className="login-link">
+        <Link to="/login" onClick={handleLogout} className="login-link">
       Logout
     </Link>
         <div className="todo-stats">
