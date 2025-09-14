@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import TodoItem from '../todoitems/TodoItem';
 import TodoForm from '../todoform/TodoForm';
 import Pagination from '../pagination/Pagination';
 import TodoFilter from '../todofilter/TodoFilter';
 import TodoAPI from '../../services/todoApi';
 import './board.css';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const TodoBoard = () => {
   const [todos, setTodos] = useState([]);
@@ -159,20 +160,15 @@ const TodoBoard = () => {
     return { total: todos.length, completed, pending };
   }, [todos]);
 
-  const navigate=useNavigate();
-   const handleSignup=(e)=>{
-    
-    e.preventDefault();
-    navigate('/register');
-  }
+
   return (
     <div className="app">
       <header className="app-header">
-        <Link to="/login" className="login-link">
-                    Login/Sign-Up
-                  </Link>
-         
+        
         <h1>Todo List Manager</h1>
+        <Link to="/login" className="login-link">
+      Logout
+    </Link>
         <div className="todo-stats">
           <div className="stat-item">
             <span className="stat-number">{totalElements}</span>

@@ -30,24 +30,6 @@
   text-align: center;
 }
 
-/* Login link in top right corner */
-.login-link {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  text-decoration: none;
-  background: #4a90e2;
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.login-link:hover {
-  background: #357abd;
-}
 
 .doboard {
   font-size: 3rem;
@@ -298,4 +280,23 @@ span.completed{
   .delete-all-btn, .refresh-btn {
     width: 200px;
   }
+}
+
+.login-link {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  text-decoration: none;
+  background-color: #d62828;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+
+.login-link:hover {
+  background-color: #a4161a;
 }

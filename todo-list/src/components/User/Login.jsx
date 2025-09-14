@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate,Link } from "react-router-dom";
-import AuthService from "../../services/AuthService"; // we'll create this service
+import AuthService from "../../services/AuthService"; 
 import './Log.css';
 const Login = () => {
   const navigate = useNavigate();
@@ -66,6 +66,12 @@ const Login = () => {
           <Link to="/register" className="register-link">
             Sign-up here
           </Link>
+          <p>forget password{" "}
+            <Link to="/forget-password" className="register-link">
+            recover acc
+          </Link>
+          </p>
+          
         </p>
   </form>
 </div>

@@ -1,8 +1,8 @@
-// src/components/Register.js
+
 import React, { useState } from "react";
 import AuthService from "../../services/AuthService";
 import { useNavigate } from "react-router-dom";
-import TodoBoard from "../todoBoard/TodoBoard";
+
 import { Link} from 'react-router-dom';
 import './Reg.css';
 export default function Register() {
